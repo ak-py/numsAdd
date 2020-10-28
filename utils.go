@@ -13,20 +13,22 @@ func reverseSlice(arr []int) []int {
 	return arr
 }
 
+// intSliceToString returns string representation of a number by converting the integer slice representation to a string
 func intSliceToString(nums []int) string {
 	return strings.Trim(strings.Replace(fmt.Sprint(nums), " ", "", -1), "[]")
 }
 
-// MaxInt returns the larger of x or y.
-func MaxInt(x, y int) int {
+// maxInt returns the larger of x or y.
+func maxInt(x, y int) int {
 	if x < y {
 		return y
 	}
 	return x
 }
 
+// popLeadingZeros returns the number after popping off any leading zeros in the number
 func popLeadingZeros(nums []int) []int {
-	//fmt.Println(LogVal("popping leading zeros from int array", nums))
+	//fmt.Println(logVal("popping leading zeros from int array", nums))
 
 	var idx int
 	for i, val := range nums {
@@ -43,7 +45,8 @@ func popLeadingZeros(nums []int) []int {
 }
 
 /*
-func LogVal(arg string, val interface{}) string {
+// logVal is a helper function to help debug code
+func logVal(arg string, val interface{}) string {
 	return fmt.Sprintf("%s: \t\t %+v", arg, val)
 }
 */

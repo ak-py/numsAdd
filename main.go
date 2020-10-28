@@ -40,12 +40,12 @@ func Add(leftNums []int, rightNums []int) string {
 
 	*/
 
-	//fmt.Println(LogVal("leftNums", leftNums))
-	//fmt.Println(LogVal("rightNums", rightNums))
+	//fmt.Println(logVal("leftNums", leftNums))
+	//fmt.Println(logVal("rightNums", rightNums))
 
 	// pre processing steps
 	leftLen, rightLen := len(leftNums), len(rightNums)
-	totalNums := make([]int, MaxInt(leftLen, rightLen)+1)
+	totalNums := make([]int, maxInt(leftLen, rightLen)+1)
 	leftNums = reverseSlice(leftNums)
 
 	var carry int
@@ -70,7 +70,7 @@ func Add(leftNums []int, rightNums []int) string {
 	// post processing steps
 	totalNums = reverseSlice(totalNums)
 	totalNums = popLeadingZeros(totalNums)
-	//fmt.Println(LogVal("totalNums", totalNums))
+	//fmt.Println(logVal("totalNums", totalNums))
 
 	// preserve leftNums
 	leftNums = reverseSlice(leftNums)
@@ -96,11 +96,11 @@ func main() {
 		num2 = append(num2, i)
 	}
 
-	fmt.Println(LogVal("num1", num1))
-	fmt.Println(LogVal("num2", num2))
+	fmt.Println(logVal("num1", num1))
+	fmt.Println(logVal("num2", num2))
 
 	result := Add(num1, num2)
 
-	fmt.Println(LogVal("Result", result))
+	fmt.Println(logVal("Result", result))
 }
 */
